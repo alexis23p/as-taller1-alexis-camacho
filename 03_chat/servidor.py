@@ -1,4 +1,5 @@
 import socket
+import threading
 HOST = 'localhost'
 PORT = 9000
 
@@ -15,8 +16,7 @@ def atender_cliente(cliente_skt,cliente_nombre):
         except ConnectionResetError:
             clientes.remove(cliente_skt)
             cliente_skt.close()
-            break
-    
+            break  
 def broacast(mensaje,emisor):
     for cliente in clientes:
         if cliente != emisor:

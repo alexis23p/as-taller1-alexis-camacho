@@ -10,6 +10,6 @@ cliente.sendall(mensaje.encode)
 print(f"Mensaje enviado: {mensaje}")
 
 respuesta = cliente.recv(1024)
-print(f"respuesta del 'Echo': {respuesta.decode}'")
+print(f"respuesta del 'Echo': {respuesta.decode()}")
 cliente.close()
 

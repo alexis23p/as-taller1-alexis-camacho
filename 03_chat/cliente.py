@@ -20,7 +20,6 @@ hilo_recibir.start()
 while True:
     mensaje = input("Ingrese un mensaje: ")
     cliente.sendall(mensaje.encode())
-    
 cliente.close()
 
 
